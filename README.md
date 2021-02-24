@@ -27,6 +27,7 @@ Principle because it would  be responsible for keeping the weather information u
  * Observable: an object that can be observed
  * Observer: an object that must be notified when the state of the Observable changes
  * Notifier: an object that  is responsible for notifying Observers about state changes of a specific Observable
- 
+ * NotifiesObserver: name of the interface that Observer should use when communicating to the Notifier
+ * WatchesObservable: name of the interface that Observable should use when communicating to the Notifier
 
 

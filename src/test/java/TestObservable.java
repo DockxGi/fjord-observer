@@ -10,7 +10,13 @@ public class TestObservable implements Observable {
         notifier = new AllObserversNotifier();
     }
 
-    public Notifier getNotifier() {
+
+    @Override
+    public NotifiesObservers getNotifier() {
         return notifier;
+    }
+
+    public void change() {
+        this.notifier.notifyObservers();
     }
 }

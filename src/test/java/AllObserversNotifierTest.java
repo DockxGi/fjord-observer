@@ -6,7 +6,7 @@ public class AllObserversNotifierTest {
     @Test
     public void shouldNotifyAllObservers(){
         TestObservable observable = new TestObservable();
-        Notifier notifier = observable.getNotifier();
+        NotifiesObservers notifier = observable.getNotifier();
 
         TestObserver observer1 = new TestObserver();
         TestObserver observer2 = new TestObserver();
@@ -14,7 +14,7 @@ public class AllObserversNotifierTest {
         notifier.addObserver(observer1);
         notifier.addObserver(observer2);
 
-        notifier.notifyObservers();
+        observable.change();
 
         Assert.assertEquals(1, observer1.getUpdateCount());
         Assert.assertEquals(1, observer2.getUpdateCount());
